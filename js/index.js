@@ -2,7 +2,7 @@ const Cuotas = 4;
 const Precio = 1000;
 const Interes = 0.4;
 let preciofinalcuotas = Precio;
-let ahorro = 100_000;
+let saldo = 100_000;
 
 function calcular(cuotas, precio, interes) {
     if (interes == 0 && cuotar == 1) {
@@ -16,13 +16,11 @@ function calcular(cuotas, precio, interes) {
 
 
 
-console.log(
-    calcular(Cuotas, Precio, Interes)
-);
-
+console.log(`el valor final de cada cuota es: ${calcular(Cuotas, Precio, Interes)}`);
+let aux = 1
 //algo tenia que hacer con un loop
-while (Cuotas > 0) {
-    Cuotas = Cuotas - 1;
-    ahorro = ahorro - preciofinalcuotas;
-    console.log(ahorro);
+while (aux <= Cuotas) {
+    saldo = saldo - preciofinalcuotas;
+    console.log(`el saldo despues de la cuota ${aux} es: ${saldo}`);
+    aux = aux + 1;
 }
