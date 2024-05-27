@@ -1,19 +1,28 @@
-let cuotas = 4;
-let precio = 1000;
-let interes = 0.4;
-let preciofinalcuotas = precio
-let ahorro = 100_000
+const Cuotas = 4;
+const Precio = 1000;
+const Interes = 0.4;
+let preciofinalcuotas = Precio;
+let ahorro = 100_000;
 
-if (interes == 0 && cuotar == 1) {
-    console.log(precio)
-} else {
-    preciofinalcuotas = (precio + (precio * interes)) / cuotas;
-    console.log(preciofinalcuotas)
+function calcular(cuotas, precio, interes) {
+    if (interes == 0 && cuotar == 1) {
+        return preciofinalcuotas;
+    } else {
+        preciofinalcuotas = (precio + (precio * interes)) / cuotas;
+        return preciofinalcuotas;
+    }
 }
 
 
-while (cuotas > 0) {
-    cuotas = cuotas - 1;
+
+
+console.log(
+    calcular(Cuotas, Precio, Interes)
+);
+
+//algo tenia que hacer con un loop
+while (Cuotas > 0) {
+    Cuotas = Cuotas - 1;
     ahorro = ahorro - preciofinalcuotas;
-    console.log(ahorro)
+    console.log(ahorro);
 }
